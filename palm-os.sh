@@ -59,7 +59,7 @@ fi
 # Creates expected partition table for PalmOS
 echo 'AAAAAAAAAAAAAAAAAAAAAQEABlgPCD8AAACACwIAAFgQCAAoHAu/CwIAgLAAAAAoHQsLz13xP7wCAIBLdwAAAAAAAAAAAAAAAAAAAAAAVao=' | python -c 'import base64,sys;sys.stdout.write("\0"*432+base64.b64decode(sys.stdin.read()))' > table.sct
 
-echo "Enter device name (eg: sdb1 for /dev/sdb1):"
+echo "Enter device name (eg: sdb for /dev/sdb):"
 read DEVICE
 
 # Writes partition table to the device
